@@ -29,8 +29,12 @@ def main():
     words = countWords(fileContents)
     characters = countChars(fileContents)
 
-    print(words)
-    print(characters)
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{words} words found in the document\n")
+    for c in characters:
+        if c.isalpha():
+            print(f"The '{c}' character was found {characters[c]} times")
+    print("--- End report ---")
 
 
 main()
